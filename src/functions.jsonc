@@ -92,6 +92,20 @@
           }
         }
       }
+    },
+    {
+      "name": "send_draft",
+      "description": "Sends an existing email draft",
+      "parameters": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID of the draft to send"
+          }
+        }
+      }
     }
   ]
 }

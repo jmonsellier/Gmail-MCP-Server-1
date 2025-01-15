@@ -1,0 +1,196 @@
+{
+  "functions": [
+    {
+      "name": "send_email",
+      "description": "Sends a new email",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "to": {
+            "description": "List of recipient email addresses",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "cc": {
+            "description": "List of CC recipients",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "bcc": {
+            "description": "List of BCC recipients",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "body": {
+            "description": "Email body content",
+            "type": "string"
+          }
+        },
+        "required": ["to", "subject", "body"],
+        "type": "object"
+      }
+    },
+    {
+      "name": "read_email",
+      "description": "Retrieves the content of a specific email",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "messageId": {
+            "description": "ID of the email message to retrieve",
+            "type": "string"
+          }
+        },
+        "required": ["messageId"],
+        "type": "object"
+      }
+    },
+    {
+      "name": "search_emails",
+      "description": "Searches for emails using Gmail search syntax",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "description": "Gmail search query",
+            "type": "string"
+          },
+          "maxResults": {
+            "description": "Maximum number of results to return",
+            "type": "number"
+          }
+        },
+        "required": ["query"],
+        "type": "object"
+      }
+    },
+    {
+      "name": "create_draft",
+      "description": "Creates an email draft that can be modified before sending",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "to": {
+            "description": "List of recipient email addresses",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "cc": {
+            "description": "List of CC recipients",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "bcc": {
+            "description": "List of BCC recipients",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "body": {
+            "description": "Email body content",
+            "type": "string"
+          }
+        },
+        "required": ["to", "subject", "body"],
+        "type": "object"
+      }
+    },
+    {
+      "name": "list_drafts",
+      "description": "Lists all email drafts",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "maxResults": {
+            "description": "Maximum number of drafts to return",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      }
+    },
+    {
+      "name": "update_draft",
+      "description": "Updates an existing email draft",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "draftId": {
+            "description": "ID of the draft to update",
+            "type": "string"
+          },
+          "to": {
+            "description": "List of recipient email addresses",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "cc": {
+            "description": "List of CC recipients",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "bcc": {
+            "description": "List of BCC recipients",
+            "items": {"type": "string"},
+            "type": "array"
+          },
+          "subject": {
+            "description": "Email subject",
+            "type": "string"
+          },
+          "body": {
+            "description": "Email body content",
+            "type": "string"
+          }
+        },
+        "required": ["draftId"],
+        "type": "object"
+      }
+    },
+    {
+      "name": "delete_draft",
+      "description": "Deletes an email draft",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "draftId": {
+            "description": "ID of the draft to delete",
+            "type": "string"
+          }
+        },
+        "required": ["draftId"],
+        "type": "object"
+      }
+    },
+    {
+      "name": "send_draft",
+      "description": "Sends an existing email draft",
+      "parameters": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": false,
+        "properties": {
+          "draftId": {
+            "description": "ID of the draft to send",
+            "type": "string"
+          }
+        },
+        "required": ["draftId"],
+        "type": "object"
+      }
+    }
+  ]
+}

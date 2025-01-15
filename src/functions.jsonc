@@ -28,6 +28,23 @@
           }
         }
       }
+    },
+    {
+      "name": "list_drafts",
+      "description": "Lists all email drafts",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "maxResults": {
+            "type": "number",
+            "description": "Maximum number of drafts to return"
+          },
+          "pageToken": {
+            "type": "string",
+            "description": "Page token for pagination"
+          }
+        }
+      }
     }
   ]
 }

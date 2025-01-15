@@ -1,0 +1,142 @@
+{
+  "functions": [
+    {
+      "name": "create_draft",
+      "description": "Creates a new email draft",
+      "parameters": {
+        "type": "object",
+        "required": ["message"],
+        "properties": {
+          "message": {
+            "type": "object",
+            "required": [],
+            "properties": {
+              "to": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Email addresses of recipients"
+              },
+              "cc": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Email addresses of CC recipients"
+              },
+              "bcc": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Email addresses of BCC recipients"
+              },
+              "subject": {
+                "type": "string",
+                "description": "Subject of the email"
+              },
+              "body": {
+                "type": "string",
+                "description": "Body content of the email"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "list_drafts",
+      "description": "Lists all email drafts",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "maxResults": {
+            "type": "number",
+            "description": "Maximum number of drafts to return"
+          },
+          "pageToken": {
+            "type": "string",
+            "description": "Page token for pagination"
+          }
+        }
+      }
+    },
+    {
+      "name": "update_draft",
+      "description": "Updates an existing email draft",
+      "parameters": {
+        "type": "object",
+        "required": ["id", "message"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID of the draft to update"
+          },
+          "message": {
+            "type": "object",
+            "properties": {
+              "to": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Email addresses of recipients"
+              },
+              "cc": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Email addresses of CC recipients"
+              },
+              "bcc": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Email addresses of BCC recipients"
+              },
+              "subject": {
+                "type": "string",
+                "description": "Subject of the email"
+              },
+              "body": {
+                "type": "string",
+                "description": "Body content of the email"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "delete_draft",
+      "description": "Deletes an email draft",
+      "parameters": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID of the draft to delete"
+          }
+        }
+      }
+    },
+    {
+      "name": "send_draft",
+      "description": "Sends an existing email draft",
+      "parameters": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID of the draft to send"
+          }
+        }
+      }
+    }
+  ]
+}

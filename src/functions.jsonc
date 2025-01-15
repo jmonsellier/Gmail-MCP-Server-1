@@ -1,34 +1,4 @@
 {
-  // Gmail Draft Management Functions
-  "functions": [
-    {
-      "name": "create_draft",
-      "description": "Creates a new email draft",
-      "parameters": {
-        "type": "object",
-        "required": ["message"],
-        "properties": {
-          "message": {
-            "type": "object",
-            "properties": {
-              "to": {
-                "type": "array",
-                "items": { "type": "string" },
-                "description": "Email addresses of recipients"
-              },
-              "subject": {
-                "type": "string",
-                "description": "Subject of the email"
-              },
-              "body": {
-                "type": "string",
-                "description": "Body content of the email",
-                "format": "html"
-              }
-            }
-          }
-        }
-      }
-    }
-  ]
+  "encoding": "base64",
+  "content": "ewogIC8vIEdtYWlsIERyYWZ0IE1hbmFnZW1lbnQgRnVuY3Rpb25zCiAgImZ1bmN0aW9ucyI6IFsKICAgIHsKICAgICAgIm5hbWUiOiAiY3JlYXRlX2RyYWZ0IiwKICAgICAgImRlc2NyaXB0aW9uIjogIkNyZWF0ZXMgYSBuZXcgZW1haWwgZHJhZnQiLAogICAgICAicGFyYW1ldGVycyI6IHsKICAgICAgICAidHlwZSI6ICJvYmplY3QiLAogICAgICAgICJyZXF1aXJlZCI6IFsibWVzc2FnZSJdLAogICAgICAgICJwcm9wZXJ0aWVzIjogewogICAgICAgICAgIm1lc3NhZ2UiOiB7CiAgICAgICAgICAgICJ0eXBlIjogIm9iamVjdCIsCiAgICAgICAgICAgICJwcm9wZXJ0aWVzIjogewogICAgICAgICAgICAgICJ0byI6IHsKICAgICAgICAgICAgICAgICJ0eXBlIjogImFycmF5IiwKICAgICAgICAgICAgICAgICJpdGVtcyI6IHsgInR5cGUiOiAic3RyaW5nIiB9LAogICAgICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIkVtYWlsIGFkZHJlc3NlcyBvZiByZWNpcGllbnRzIgogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgInN1YmplY3QiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIlN1YmplY3Qgb2YgdGhlIGVtYWlsIgogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgImJvZHkiOiB7CiAgICAgICAgICAgICAgICAidHlwZSI6ICJzdHJpbmciLAogICAgICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIkJvZHkgY29udGVudCBvZiB0aGUgZW1haWwiLAogICAgICAgICAgICAgICAgImZvcm1hdCI6ICJodG1sIgogICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIF0KfQ=="
 }

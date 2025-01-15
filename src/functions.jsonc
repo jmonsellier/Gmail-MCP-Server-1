@@ -45,6 +45,39 @@
           }
         }
       }
+    },
+    {
+      "name": "update_draft",
+      "description": "Updates an existing email draft",
+      "parameters": {
+        "type": "object",
+        "required": ["id", "message"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID of the draft to update"
+          },
+          "message": {
+            "type": "object",
+            "properties": {
+              "to": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Email addresses of recipients"
+              },
+              "subject": {
+                "type": "string",
+                "description": "Subject of the email"
+              },
+              "body": {
+                "type": "string",
+                "description": "Body content of the email",
+                "format": "html"
+              }
+            }
+          }
+        }
+      }
     }
   ]
 }
